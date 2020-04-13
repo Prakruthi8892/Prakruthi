@@ -1,0 +1,11 @@
+ef normalize(wine):
+    result = wine.copy()
+    for feature_name in wine.columns:
+        max_value = wine[feature_name].max()
+        min_value = wine[feature_name].min()
+        result[feature_name] = (wine[feature_name] - min_value) / (max_value - min_value)
+    return result
+    
+    red=normalize(redwine)
+    
+    red.head()
