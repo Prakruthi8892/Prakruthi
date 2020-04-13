@@ -1,0 +1,7 @@
+ Load the data
+df = pd.read_csv("../data/loans.csv")
+# Check both the datatypes and if there is missing values print(f"Data types:\n{11 * '-'}")
+print(f"{df.dtypes}\n")
+print(f"Sum of null values in each feature:\n{35 * '-'}")
+print(f"{df.isnull().sum()}")
+df.head()
